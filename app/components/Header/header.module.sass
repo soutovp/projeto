@@ -10,23 +10,22 @@
 		@include flex-inline
 		gap: 16px
 		list-style: none
-		li
-			border: 1px solid black
-			padding: .2rem
+		position: relative
 	a
-		color: black
+		position: relative
 		text-decoration: none
+		color: black
+	li
+		border: 1px solid black
+		box-shadow: -3px 3px 0px black
+		border-radius: .5rem
+		padding: 1rem
+		position: relative
+		transition: .1s
 		&:hover
 			color: blue
-			transition: .2s
+			border: 1px solid blue
+			box-shadow: -3px 3px 0px blue
 		&:active
-			animation-name: press
-			animation-duration: .2s
-
-@keyframes press
-	from
-
-	10%
-		transform: translate(-2px, 2px)
-	to
-		transform: translate(0, 0)
+			transform: translate(-3px, 3px)
+			box-shadow: 0 0 0 black
